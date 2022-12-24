@@ -1,0 +1,21 @@
+'''database connetion '''
+import mysql.connector  # import mysql connector
+mydb = mysql.connector.connect(  #create connection
+    host="localhost",   #host
+    user=" root",  #username 
+    passwd="root",  #password 
+    database="jobint"  #database name
+)
+
+
+mycursor = mydb.cursor()
+
+
+#mycursor.execute("insert into user (id,name,surname) values (1,'mario','rossi')")  #insert data
+
+   
+mycursor.execute("select * from user") 
+myresult=   mycursor.fetchall()
+
+for x in myresult:
+    print(x)#select data        
