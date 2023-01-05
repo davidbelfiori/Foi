@@ -7,18 +7,6 @@
 # Nota:nel definire la funzione,l'operatore Python di uguaglianza == può essere applicato
 # solo a stringhe di lunghezza ≤1 . 
 
-def probl(s,s1,s2):
-    if  s1==s2:
-        return True
-    elif s1!=s2:
-        return False
-    else:
-        if len(s)%2==0:
-            
-            probl(s,s[len(s)/2+1:len(s)/2],s[len(s)/2:len(s)/2+1])
-        #else:
-         #   probl(s,s[:len(s)//2],s[len(s)//2:])
-
 
 
 def is_half_palindrome(s):
