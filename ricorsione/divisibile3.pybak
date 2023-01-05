@@ -1,0 +1,14 @@
+def divisibile3(n):
+    if n >= 0:
+        if n == 0:
+            print "divisibile per 3"
+        else:
+            
+            a = n - 3
+            print a
+            divisibile3(a)
+    else:
+        print "non divisibile per 3"
+
+
+
