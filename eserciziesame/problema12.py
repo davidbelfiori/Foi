@@ -18,8 +18,11 @@ def is_half_palindrome(s):
     
   
   # Verifica se la prima metà della stringa è uguale alla seconda
-    return s[:len(s)//2] == s[len(s)//2:]
-    
+    if len(s)%2==0:
+      return s[:len(s)//2] == s[len(s)//2:]
+    else:
+      return s[:len(s)//2] == s[(len(s)//2)+1:]
+      
 
-print(is_half_palindrome("assoasso"))
+print(is_half_palindrome("assokasso"))
 
