@@ -14,4 +14,18 @@ def ricorsione(l):
         return ricorsione (l[1:])
 
 numbers = [2, 4, 6, -3, 5]
-print(ricorsione(numbers))
+# print(ricorsione(numbers))
+
+
+
+def findx(l,x):
+    if len(x) != 1:
+        return False
+    if len(l) == 0:
+        return False
+    elif x in l[0]:
+         return True
+    else:
+        return findx(l[1:])
+    
+print(findx(["aa","ee","aoio","tumadre","ncsp"],"n"))
