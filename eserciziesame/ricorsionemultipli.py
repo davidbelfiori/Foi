@@ -6,8 +6,8 @@ def ricorsione(l,v,k):
     if len(l)==0:
         return True
     elif len(l)<  k:
-        return l[0]==v
+        return l[k]==v
     else:
         return ricorsione(l[1:],v,k*2)
     
-print(ricorsione(["aa","aa","bb"],"aa",2))
+print(ricorsione(["aa","aa","bb","aa","cc"],"aa",2))
