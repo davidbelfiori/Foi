@@ -26,6 +26,6 @@ def findx(l,x):
     elif x in l[0]:
          return True
     else:
-        return findx(l[1:])
+        return findx(l[1:],x)
     
 print(findx(["aa","ee","aoio","tumadre","ncsp"],"n"))
