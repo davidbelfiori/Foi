@@ -24,5 +24,5 @@ def is_half_palindrome(s):
       return s[:len(s)//2] == s[(len(s)//2)+1:]
       
 
-print(is_half_palindrome("assokasso"))
+print(is_half_palindrome("assoiasso"))
 
