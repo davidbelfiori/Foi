@@ -125,4 +125,21 @@ def Prob17(l):
     else:
         return Prob17(l[1:])
 
-print(Prob17(["assa","osso","fwheipiewphfwihf","aaaaaaaaaaas"]))
+#print(Prob17(["assa","osso","fwheipiewphfwihf","aaaaaaaaaaas"]))
+
+#Scrivere una funzione ricorsiva che, data una stringa s, restituisce come risultato una stringa ottenuta elimanando
+# da s tutti i caratteri ripetuti consecutivamente, tranne il primo (Es.: se s = ‘aaabbcccc’ la funzione deve restituire
+# ‘abc’; se s = ‘ababcc’ la funzione deve restituire ‘ababc’.
+
+def delateDuplicate(s):
+
+    if len(s)<=1:
+        return  s
+    elif s[0]==s[1]:
+        return delateDuplicate(s[1:])
+    else: return  s[0]+delateDuplicate(s[1:])
+
+#print(delateDuplicate("asssaaass"))
+
+#Scrivere una funzione ricorsiva che data un stringa s restituisca la stringa ottenuta da s eliminando le vocali.
+# Ad esempio l’invocazione eliminaVocali(‘pippo’) deve restituire la stringa ‘ppp’.
