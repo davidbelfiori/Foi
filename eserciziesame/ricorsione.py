@@ -397,4 +397,30 @@ def upperLower(s):
     elif s[0]==s[0].lower():
         return  s[0].upper() + upperLower(s[1:])
     else: return s[0]+upperLower(s[1:])
-print(upperLower("ciAo-"))
+#print(upperLower("ciAo-"))
+
+def val_Mag_m(l,m):
+    #@param l: list
+    #@param m: int
+    if not l:
+        return 0
+    elif l[0]>=m:
+        return  l[0]+ val_Mag_m(l[1:],m)
+    else:
+        return val_Mag_m(l[1:],m)
+
+print(val_Mag_m([1,2,3,4,5,6,7,8,9,10],11))
+
+def listS1S2(l,s1,s2):
+    #@param l: list
+    #@param s1: string
+    #@param s2: string
+    if not l:
+        return []
+    elif len(l)==1:
+        return False
+    elif l[0]==s1 and l[1]==s2:
+        return True
+    else:
+        return listS1S2(l[1:],s1,s2)
+print(listS1S2(["ass","egg","scimmia"],"egg","scimmia"))
