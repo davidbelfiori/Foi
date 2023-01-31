@@ -197,4 +197,75 @@ def ovenlist(l):
     elif l[0]%2==1: return [l[0]] + ovenlist(l[1:])
     else: return ovenlist(l[1:])
 
-print(ovenlist([1,2,3,4,5,6,7,8,3,4,5,6,7,8,8,765]))
+#print(ovenlist([1,2,3,4,5,6,7,8,3,4,5,6,7,8,8,765]))
+
+#Problema 1. Scrivere una funzione ricorsiva che, data una stringa s, restituisce come risultato una stringa formata da tutti
+# i caratteri di s separati tra loro da uno spazio bianco.Esempio: data la stringa "abcd", la funzione deve restituire
+# la stringa "a b c d"
+
+def space(s):
+    if not s:
+        return ""
+    elif len(s)==1:
+        return s[0]
+    else:
+        return s[0]+" "+space(s[1:])
+
+print(space("abcd"))
+
+#Scrivere una funzione ricorsiva che, data una lista L di stringhe, restituisce come risultato una stringa formata dalla
+# concatenazione di tutte le stringhe in L aventi lunghezza dispari.Se la lista non contiene stringhe di lunghezza dispari,
+# la funzione restituisce la stringa vuota.
+
+def oddlen(l):
+    if not l:
+        return ""
+    elif len(l[0])%2==1:
+        return l[0]+oddlen(l[1:])
+    else:
+        return  oddlen(l[1:])
+
+print(oddlen(["assaa","osso","fwheipiewphfwihf","aaaaaaaaaaas","aaaaa"]))
+
+#data un astringa s di qualunque lunghezza scrivere una funzione ricorsiva che:
+# 1) restituisce il numero di cifre numeriche in s
+
+def numRep(s):
+    if not s:
+        return 0
+    elif s[0].isnumeric():
+        return 1+ numRep(s[1:])
+    else:
+        return  numRep(s[1:])
+
+#print(numRep("assaa1osso2fwheipiewphfwihf3aaaaaaaaaaas4aaaaa"))
+
+#data un astringa s di qualunque lunghezza scrivere una funzione ricorsiva che: restituisce in una lista le cifre presenti nella stringa s
+
+def numRepList(s):
+    if not s:
+        return []
+    elif s[0].isnumeric():
+        return [s[0]] + numRepList(s[1:])
+    else:
+        return  numRepList(s[1:])
+
+print(numRepList("assaa1osso2fwheipiewphfwihf3aaaaaaaaaaas4aaaaa"))
+
+
+def numupper(s):
+    if not s:
+        return 0
+    elif s[0].isupper():
+        return 1+ numupper(s[1:])
+    else:
+        return  numupper(s[1:])
+
+#scrivi un programma ceh converta da decimale a binario
+
+def dec2bin(n):
+    if n==0:
+        return ""
+    else:
+        return dec2bin(n//2) + str(n%2)
+
