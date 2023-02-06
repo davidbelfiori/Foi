@@ -423,4 +423,13 @@ def listS1S2(l,s1,s2):
         return True
     else:
         return listS1S2(l[1:],s1,s2)
-print(listS1S2(["ass","egg","scimmia"],"egg","scimmia"))
+#print(listS1S2(["ass","egg","scimmia"],"egg","scimmia"))
+
+def listaChanghenegativi(l):
+    if not l:
+        return []
+    elif l[0]<0:
+        return [0] + listaChanghenegativi(l[1:])
+    else: return [l[0]] + listaChanghenegativi(l[1:])
+
+print(listaChanghenegativi([1,2,3,4,5,6,7,8,9,10,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]))
